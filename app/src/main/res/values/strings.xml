@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Lista de Compras da Pri</string>
     <string name="btn_add">Adicionar!</string>
+    <string name="txtAddCompra">Adicione aqui o item de compra!</string>
+    <string name="edtItem">Digite o item</string>
+    <string name="edtQnt">Digite a quantidade</string>
 </resources>

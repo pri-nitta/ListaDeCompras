@@ -1,5 +1,6 @@
 package com.ctt.listadecompras
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -35,9 +36,9 @@ class MainActivity : AppCompatActivity() {
         rvCompras.adapter = adapterLista
 
         addItem.setOnClickListener{
-            adapterLista.adicionarItem(
-                listaCompras(item = "Chocolate", quantidade = 10)
-            )
+            val intent = Intent(this,activity_listaCompras::class.java)
+            startActivity(intent)
+            finish()
         }
 
         rvCompras.layoutManager = LinearLayoutManager(this)
