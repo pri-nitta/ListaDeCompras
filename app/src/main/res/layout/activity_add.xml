@@ -9,14 +9,14 @@
         tools:context=".activity_AddNew">
 
     <TextView
-            android:id="@+id/txtActionTile"
+            android:id="@+id/txtActionTitle"
             android:text="@string/txtAddCompra"
             android:textColor="@color/coralClaro"
-            android:textSize="20sp"
+            android:textSize="23sp"
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="200dp"
             app:layout_constraintBottom_toTopOf="@+id/edtItem"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,13 +26,13 @@
             android:id="@+id/edtItem"
             android:hint="@string/edtItem"
             android:textAlignment="center"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:background="@color/colorPrimary"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtActionTile"/>
+            app:layout_constraintTop_toBottomOf="@+id/txtActionTitle"/>
 
     <EditText
             android:id="@+id/edtQnt"
@@ -40,7 +40,7 @@
             android:textAlignment="center"
             android:layout_marginTop="30dp"
             android:background="@color/colorPrimary"
-            android:layout_width="350dp"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,11 +49,22 @@
     <ImageView
             android:id="@+id/img_kitty1"
             android:background="@drawable/ic_kitty2"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/txtActionTile"
+            app:layout_constraintBottom_toTopOf="@+id/txtActionTitle"
             app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+            android:id="@+id/btnAddItem"
+            android:background="@color/coralClaro"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/btnAdicionar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtQnt"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

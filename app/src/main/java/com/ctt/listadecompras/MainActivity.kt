@@ -15,34 +15,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val listaCompras = mutableListOf<listaCompras>(
-            listaCompras(
-                item = "Sabonete",
-                quantidade = 5
-            ),
-            listaCompras(
-                item = "Batata inglesa",
-                quantidade = 4
-            ),
-            listaCompras(
-                item = "Cenoura",
-                quantidade = 3)
-        )
-
         val rvCompras = findViewById<RecyclerView>(R.id.listaTarefas)
         val addItem = findViewById<Button>(R.id.btn_add)
 
-        val adapterLista = ListaAdapter(listaCompras)
+        val adapterLista = ListaAdapter(listaComprasMain)
         rvCompras.adapter = adapterLista
 
-        addItem.setOnClickListener{
-            val intent = Intent(this,activity_listaCompras::class.java)
+        addItem.setOnClickListener {
+            val intent = Intent(this, activity_AddNew::class.java)
             startActivity(intent)
             finish()
         }
-
         rvCompras.layoutManager = LinearLayoutManager(this)
+    }
 
-
+    companion object {
+        val listaComprasMain = mutableListOf<listaCompras>()
     }
 }

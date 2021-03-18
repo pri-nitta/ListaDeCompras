@@ -1,5 +1,6 @@
 package com.ctt.listadecompras.model
 
+import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,13 +16,27 @@ class ListaAdapter(private val listaCompras: MutableList<listaCompras>): Recycle
     }
 
     fun adicionarItem(novoItem: listaCompras){
-        listaCompras.add(novoItem)
+
         notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.item.text= listaCompras[position].item
-        holder.quantidade.text = listaCompras[position].quantidade.toString()
+        holder.item.text = listaCompras[position].item
+        holder.quantidade.text = listaCompras[position].quantidade
+
+        holder.itemView.setOnClickListener {
+            val builder = AlertDialog.Builder(it.context)
+            builder.setTitle("Item")
+            builder.setMessage("Você deseja realmente deletar essa tarefa?")
+            builder.setPositiveButton("Yeap!") { dialog, which ->
+                listaCompras.removeAt(position)
+                notifyDataSetChanged()
+            }
+            builder.setNegativeButton("Nens") { dialog, which -> }
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
     }
 
     override fun getItemCount(): Int {

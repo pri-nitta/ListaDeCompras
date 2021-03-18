@@ -4,4 +4,5 @@
     <string name="txtAddCompra">Adicione aqui o item de compra!</string>
     <string name="edtItem">Digite o item</string>
     <string name="edtQnt">Digite a quantidade</string>
+    <string name="btnAdicionar">Adicionar! :3</string>
 </resources>
