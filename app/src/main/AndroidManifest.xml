@@ -10,9 +10,12 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name="activity_AddNew"></activity>
+        <activity android:name=".MainActivity"></activity>
         <activity android:name=".activity_listaCompras">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity
+                android:name=".splash"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
