@@ -11,9 +11,9 @@
     <TextView
             android:id="@+id/txtActionTitle"
             android:text="@string/txtAddCompra"
+            android:fontFamily="@font/aurella"
             android:textColor="@color/coralClaro"
-            android:textSize="23sp"
-            android:textStyle="bold"
+            android:textSize="40sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="200dp"
