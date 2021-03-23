@@ -4,11 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ctt.listadecompras.model.ListaAdapter
-import com.ctt.listadecompras.model.listaCompras
+import com.ctt.listadecompras.model.ListaCompras
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         rvCompras.adapter = adapterLista
 
         addItem.setOnClickListener {
-            val intent = Intent(this, activity_AddNew::class.java)
+            val intent = Intent(this, Activity_AddNew::class.java)
             startActivity(intent)
             finish()
         }
@@ -30,6 +29,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     companion object {
-        val listaComprasMain = mutableListOf<listaCompras>()
+        val listaComprasMain = mutableListOf<ListaCompras>()
     }
 }

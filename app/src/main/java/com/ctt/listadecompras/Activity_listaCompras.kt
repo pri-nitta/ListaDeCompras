@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
 
-class activity_listaCompras : AppCompatActivity() {
+class Activity_listaCompras : AppCompatActivity() {
 
 //    lateinit var itemTitle = EditText
 //    lateinit var itemQuant = EditText

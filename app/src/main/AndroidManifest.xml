@@ -9,12 +9,12 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name="activity_AddNew"></activity>
+        <activity android:name="Activity_AddNew"></activity>
         <activity android:name=".MainActivity"></activity>
-        <activity android:name=".activity_listaCompras">
+        <activity android:name=".Activity_listaCompras">
         </activity>
         <activity
-                android:name=".splash"
+                android:name=".Splash"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
